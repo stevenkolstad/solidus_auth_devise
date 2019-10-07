@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+module Spree::Admin::Orders::CustomerDetailsControllerDecorator
 Spree::Admin::Orders::CustomerDetailsController.class_eval do
   before_action :check_authorization
 
@@ -15,4 +16,5 @@ Spree::Admin::Orders::CustomerDetailsController.class_eval do
 
     authorize! action, resource, session[:access_token]
   end
+end
 end
